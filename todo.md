@@ -1,5 +1,7 @@
 ## TO-DO
 
+
+### Project Requirements
 - [] Needs
     - [] Create front end that allows user to create a Task
     - [] Then store Task inside of an SQL database
@@ -18,6 +20,7 @@
         - Deleting a Task
             - [] should remove the Task from front end and the database
 
+
 ### Setup
 - [] Files
     - [] PUBLIC STATIC
@@ -27,6 +30,7 @@
         - [] font family
         - [] font size
         - [] text color/background color of tasks to show if completed/not
+
     - [] jquery
     - [] client.js
     - [] .gitignore
@@ -35,9 +39,11 @@
     - [] database.sql
     - [] Module folder that has file to access/require pg 
         - [] pool.js
+
     - [] Routes folder
         - [] task.router (can create the task variable that equals a blank array)
         - [] taskLibrary
+
 
 ### Client Side
 - [] Input fields and Button
@@ -59,8 +65,8 @@
     - [] PUT
     - [] DELETE
 
-### Server Side
 
+### Server Side
 Setup:
 - [] express
 - [] Ports
@@ -68,8 +74,8 @@ Setup:
 - [] app.use paths to the task router and task library
 - [] app.listen to the port 
 
-### Routes
 
+### Routes
 - [] task Library to hold our sql query texts. this will let us access our pg pool
     - [] router.delete 
         - will be needed to delete the id/row associated with the delete button that is clicked
@@ -96,8 +102,12 @@ Setup:
 - [] create a delete from tasks sql request
 - [] write out the select _ from _ requests
 
+--------------------------------------------------------------------------------------
 
-Could make a completed task array and a todo task array. Store each in its own array then display each array on the dom. one under completed tasks and the other under todo tasks.
+## Ideas and Questions
 
-write if else statements that declare when an object is complete and triggers a css action. Could do this like when we did the color swap.
-Could do an 'on.('click', .complete, function)' function that triggers the change in completeion then retriggers the entry of this item into the database. Then follow up by getting the database after the update and append the updated list to the dom.
+- Could make a completed task array and a todo task array. Store each in its own array then display each array on the dom. one under completed tasks and the other under todo tasks.
+
+- Write if else statements that declare when an object is complete and triggers a css action. Could do this like when we did the color swap.
+
+- Could do an 'on.('click', .complete, function)' function that triggers the change in completeion then retriggers the entry of this item into the database. Then follow up by getting the database after the update and append the updated list to the dom.
