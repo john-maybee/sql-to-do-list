@@ -61,14 +61,43 @@
 
 ### Server Side
 
-- [] SET UP SERVER
-    - []
+Setup:
+- [] express
+- [] Ports
+- [] Body Parser
+- [] app.use paths to the task router and task library
+- [] app.listen to the port 
+
+### Routes
+
+- [] task Library to hold our sql query texts. this will let us access our pg pool
+    - [] router.delete 
+        - will be needed to delete the id/row associated with the delete button that is clicked
+
+    - [] router.post
+        - This will help us post our new task into the database.
+
+    - [] router.post 
+        - this one will help us post the fact our task is completed into the database (or should this be a router.put?)
+
+    - [] router.get needed to be able to select the 
+
+- [] task router to create the task variable that equals an array 
+    - [] could make it so an existing array of task objects exists on load.
+
+- [] module.exports for each router
+- [] require express
+- [] express.router
+
 
 ### Postico Database
+- [] create a table that holds the tasks and their values
+- [] create an insert into tasks sql request
+- [] create a delete from tasks sql request
+- [] write out the select _ from _ requests
 
 
-
-
+Could make a completed task array and a todo task array. Store each in its own array then display each array on the dom. one under completed tasks and the other under todo tasks.
 
 write if else statements that declare when an object is complete and triggers a css action. Could do this like when we did the color swap.
 Could do an 'on.('click', .complete, function)' function that triggers the change in completeion then retriggers the entry of this item into the database. Then follow up by getting the database after the update and append the updated list to the dom.
