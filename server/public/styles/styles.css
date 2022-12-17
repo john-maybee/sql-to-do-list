@@ -5,6 +5,16 @@ body{
 
 h1{
     color:#36447b;
+    text-align: center;
+}
+
+h2{
+    color:#36447b;
+    margin-left: 35px;
+}
+
+label{
+    color:#36447b;
     margin-left: 35px;
 }
 
