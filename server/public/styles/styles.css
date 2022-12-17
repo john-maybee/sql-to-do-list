@@ -18,7 +18,9 @@ hr{
 
 input{
     color:#36447b;
+    width: 40%;
 }
+
 
 .task-entry{
     margin-top: 25px;
