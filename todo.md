@@ -26,8 +26,8 @@
     - [] PUBLIC STATIC
     - [x] HTML
     - [x] CSS
-        - [] background color
-        - [] font family
+        - [x] background color
+        - [x] font family
         - [] font size
         - [] text color/background color of tasks to show if completed/not
 
@@ -50,9 +50,9 @@
     - [] task-input
     - [] submit-button
 
-- [] Output catch for task list
+- [x] Output catch for task list
 
-- [] jquery setup
+- [x] jquery setup
     - [] ready function
         - [] getTasks call
         - [] click listener for submit/post button
