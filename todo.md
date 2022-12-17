@@ -40,9 +40,9 @@
     - [] Module folder that has file to access/require pg 
         - [] pool.js
 
-    - [] Routes folder
-        - [] task.router (can create the task variable that equals a blank array)
-        - [] taskLibrary
+    - [x] Routes folder
+        - [x] task.router (can create the task variable that equals a blank array)
+        - [x] taskLibrary
 
 
 ### Client Side
@@ -68,11 +68,11 @@
 
 ### Server Side
 Setup:
-- [] express
-- [] Ports
-- [] Body Parser
+- [x] express
+- [x] Ports
+- [x] Body Parser
 - [] app.use paths to the task router and task library
-- [] app.listen to the port 
+- [x] app.listen to the port 
 
 
 ### Routes
