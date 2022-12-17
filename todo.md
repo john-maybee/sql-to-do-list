@@ -111,3 +111,5 @@ Setup:
 - Write if else statements that declare when an object is complete and triggers a css action. Could do this like when we did the color swap.
 
 - Could do an 'on.('click', .complete, function)' function that triggers the change in completeion then retriggers the entry of this item into the database. Then follow up by getting the database after the update and append the updated list to the dom.
+
+- Could put an h1 in front of the second list (completed tasks) and title it "reasons i should nap (just a lil bit)"

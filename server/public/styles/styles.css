@@ -5,4 +5,30 @@ body{
 
 h1{
     color:#36447b;
+    margin-left: 35px;
+}
+
+table{ 
+    color: #36447b;
+    border: 1.5px solid #36447b;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 35px;
+}
+
+th, td{
+    border: 1.5px solid #36447b;
+    padding: 12px;
+}
+
+th:first-child, td:first-child{
+    width: 70%;
+}
+
+th:nth-child(2), td:nth-child(2){
+    width: 15%;
+}
+
+th:last-child, td:last-child{
+    width: 15%;
 }
