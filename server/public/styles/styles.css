@@ -8,6 +8,28 @@ h1{
     text-align: center;
 }
 
+hr{
+    width: 91%;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to right, #2fd7ac, #5F79DC);
+}
+
+input{
+    color:#36447b;
+}
+
+.task-entry{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+button{
+    background:#5F79DC;
+    color: #2fd7ac;
+}
+
 h2{
     color:#36447b;
     margin-left: 35px;
