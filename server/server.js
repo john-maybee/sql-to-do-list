@@ -17,4 +17,10 @@ app.listen(PORT, () => {
     console.log('up and running on port', PORT);
 });
 
-// need to set up an app.use for the task router and for the task library
+let taskRouter = require('./routes/task.router');
+let taskLibraryRouter = require('./routes/taskLibrary');
+
+app.use('/tasks', taskRouter);
+app.use('/taskLibrary', taskLibraryRouter);
+
+// need to set up an app.use for the task router and for the task library [x]

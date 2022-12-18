@@ -3,7 +3,7 @@
 
 ### Project Requirements
 - [] Needs
-    - [] Create front end that allows user to create a Task
+    - [x] Create front end that allows user to create a Task
     - [] Then store Task inside of an SQL database
 
     - [] When new Task created:
@@ -46,22 +46,22 @@
 
 
 ### Client Side
-- [] Input fields and Button
-    - [] task-input
-    - [] submit-button
+- [x] Input fields and Button
+    - [x] task-input
+    - [x] submit-button
 
 - [x] Output catch for task list
 
 - [x] jquery setup
-    - [] ready function
-        - [] getTasks call
-        - [] click listener for submit/post button
+    - [x] ready function
+        - [x] getTasks call
+        - [x] click listener for submit/post button
         - [] click listener for handle-delete
         - [] click listener for handle-complete button
 
-- [] AJAX Operations
-    - [] GET (this should allow us to create html to append our response to the DOM)
-    - [] POST
+- [x] AJAX Operations
+    - [x] GET (this should allow us to create html to append our response to the DOM)
+    - [x] POST
     - [] PUT
     - [] DELETE
 
@@ -71,12 +71,12 @@ Setup:
 - [x] express
 - [x] Ports
 - [x] Body Parser
-- [] app.use paths to the task router and task library
+- [x] app.use paths to the task router and task library
 - [x] app.listen to the port 
 
 
 ### Routes
-- [] task Library to hold our sql query texts. this will let us access our pg pool
+- [x] task Library to hold our sql query texts. this will let us access our pg pool
     - [] router.delete 
         - will be needed to delete the id/row associated with the delete button that is clicked
 
@@ -86,14 +86,14 @@ Setup:
     - [] router.post 
         - this one will help us post the fact our task is completed into the database (or should this be a router.put?)
 
-    - [] router.get needed to be able to select the 
+    - [x] router.get needed to be able to select the 
 
-- [] task router to create the task variable that equals an array 
+- [x] task router to create the task variable that equals an array 
     - [] could make it so an existing array of task objects exists on load.
 
 - [] module.exports for each router
-- [] require express
-- [] express.router
+- [x] require express
+- [x] express.router
 
 
 ### Postico Database
