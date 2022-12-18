@@ -32,6 +32,11 @@ button{
     color: #2fd7ac;
 }
 
+button:hover{
+    background-color: inherit;
+    color: #36447b;
+}
+
 h2{
     color:#36447b;
     margin-left: 35px;
