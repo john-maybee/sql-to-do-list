@@ -49,7 +49,8 @@ function getTasks() {
                     <td>${response[i].task}</td>
                     <td>${response[i].status}</td>
                     <td>
-                        <button class="status-change">completed</button>
+                        <label id="status-change-label" for="status-change">incomplete</label>
+                        <button class="status-change">change</button>
                     </td>
                     <td>
                         <button class="delete">delete</button>
@@ -58,4 +59,20 @@ function getTasks() {
             `)
         }
     })
+}
+
+
+///////////////////////////////////////handleDelete function///////////////////////////////////////
+
+function handleDelete() {
+    console.log('delete button clicked');
+    // need to empty the full row that (this) resides in
+}
+
+
+///////////////////////////////////////handleStatus function///////////////////////////////////////
+
+function handleStatus() {
+    console.log('status button clicked');
+    // need to switch the statud 
 }
