@@ -47,10 +47,9 @@ function getTasks() {
             $('#incompleteTableBody').append(`
                 <tr data-id=${response[i].id}>
                     <td>${response[i].task}</td>
-                    <td>${response[i].status}</td>
                     <td>
-                        <label id="status-change-label" for="status-change">incomplete</label>
-                        <button class="status-change">change</button>
+                        <label id="status-change-label" for="status-change">${response[i].status}</label>
+                        <button class="status-change">done</button>
                     </td>
                     <td>
                         <button class="delete">delete</button>
