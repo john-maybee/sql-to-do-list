@@ -15,13 +15,13 @@ function onReady() {
     $('#incompleteTableBody').on('click', '.status', handleStatus);
 } // end of onReady function
 
-
+// let status = 'work to do';
 ///////////////////////////////////////postTask function///////////////////////////////////////
 
 function postTask() {
     console.log('submit button clicked');
     let taskObject = {
-        task: $('.new-task').val(),
+        task: $('#new-task').val(),
         status: 'work to do'
     };
     $.ajax({
