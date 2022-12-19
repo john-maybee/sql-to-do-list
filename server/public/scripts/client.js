@@ -29,7 +29,7 @@ function postTask() {
         url: '/taskLibrary',
         data: taskObject
     }).then( function (response) {
-        $('.new-task').val('');  // clear the task input field
+        $('.new-task').val('')  // clear the task input field
         getTasks();
     });
 } // end of postTask function

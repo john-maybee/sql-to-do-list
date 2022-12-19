@@ -114,3 +114,6 @@ Setup:
 
 - Could put an h1 in front of second list (completed tasks) and title it "reasons i should nap (just a lil bit)" [x]
     - Will only get items added to this list after I get the base parameters of the project completed.
+
+
+- Another idea is to create a status variable outside of the function that = 'working on it'. then pass through this variable through the client as data being passed through

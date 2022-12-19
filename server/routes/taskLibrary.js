@@ -6,7 +6,7 @@ const pool = require('../modules/pool');
 
 
 router.get('/', (req, res) => {
-    let queryText = 'SELECT * from task_table ORDER BY "id" asc;';
+    let queryText = 'SELECT * from tasks ORDER BY "id" asc;';
     pool.query(queryText)
     .then((result) => {
         console.log('results from database', result);
@@ -18,11 +18,25 @@ router.get('/', (req, res) => {
     })
 });
 
+router.get('/:id', (req, res) => {
+    console.log("Hello from get request!", req.params.id);
+    const queryText = `SELECT * from tasks WHERE id = ${req.params.id};`;
+    pool.query(queryText)
+    .then((result) => {
+        console.log('results from DB', result);
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('error making a query', error);
+        res.sendStatus(500);
+    });
+});
+
 router.post('/', (req, res) => {
     const newTask = req.body;
     const queryText = `
-        INSERT INTO "task_table" ("task", "status")
-        VALUES ($1, $2) 
+        INSERT INTO "tasks" ("task", "status")
+        VALUES ($1, $2); 
     `;
     pool.query(queryText, [newTask.task, newTask.status])
     .then((result) => {
@@ -37,6 +51,20 @@ router.post('/', (req, res) => {
 
 
 // need to add a router.delete to use along with the delete button functionality
+router.delete('/:id', (req, res) => {
+    console.log("Hello from delete request!", req.params.id);
+    const queryText = `DELETE from tasks WHERE id = ${req.params.id};`;
+    pool.query(queryText)
+    .then((result) => {
+        console.log(result);
+        res.sendStatus(202);
+    })
+    .catch((error) => {
+        console.log('error making a query', error);
+        res.sendStatus(500);
+    });
+});
+
 
 
 module.exports = router;
