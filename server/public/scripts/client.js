@@ -55,10 +55,10 @@ function getTasks() {
                         <button class="delete">delete</button>
                     </td>
                 </tr>
-            `)
+            `);
         }
-    })
-}
+    });
+} // end getTasks function
 
 
 ///////////////////////////////////////handleDelete function///////////////////////////////////////
@@ -66,7 +66,16 @@ function getTasks() {
 function handleDelete() {
     console.log('delete button clicked');
     // need to empty the full row that (this) resides in
-}
+    const id = $(this).parent().parent().data('id');
+    $.ajax({
+        type: 'DELETE',
+        url: `/taskLibrary/${id}`
+    }).then( function () {
+        getTasks();
+    }).catch(function(error) {
+        console.log('error with deleting, ', error);
+    })
+}  // end handleDelete function
 
 
 ///////////////////////////////////////handleStatus function///////////////////////////////////////
