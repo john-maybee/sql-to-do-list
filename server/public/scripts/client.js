@@ -63,7 +63,7 @@ function getTasks() {
         for(let i = 0; i < response.length; i++)  {
             if (response[i].status == "completed") {
                 console.log('complete change');
-                $(this).parent().toggleClass('left-color');
+                $('#status-change-label').parent().addClass('left-color');
             }
             else if (response[i].status == "work to do"){
                 console.log('no change in background');
