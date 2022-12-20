@@ -67,14 +67,14 @@ router.delete('/:id', (req, res) => {
 
 
 router.put('/status/:id', (req, res) => {
-    const status = req.body.status;
+    const state = req.body.state;
     let queryText = '';
-    if(status == 'completed') {
+    if(state == 'completed') {
         // change status to completed
-        queryText = `UPDATE "tasks" SET "status"="completed" WHERE "id"=${req.params.id};`;
-    } else if (status == 'work to do'){
+        queryText = `UPDATE "tasks" SET "status"='completed' WHERE "id"=${req.params.id};`;
+    } else if (state == 'work to do'){
         // change status to work to do
-        queryText = `UPDATE "tasks" SET "status"="work to do" WHERE "id"=${req.params.id};`;
+        queryText = `UPDATE "tasks" SET "status"='work to do' WHERE "id"=${req.params.id};`;
     } else {
         res.sendStatus(500);
         return;

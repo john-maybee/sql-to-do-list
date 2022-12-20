@@ -91,8 +91,8 @@ function handleStatus() {
     // status.css('background-color', '#5F79DC');
     $.ajax({
         type: 'PUT',
-        url: `/taskLibrary/${id}`,
-        data: {status: 'completed'},
+        url: `/taskLibrary/status/${id}`,
+        data: {state: 'completed'},
     }).then( function (){
         getTasks();
     }).catch( function(error) {
