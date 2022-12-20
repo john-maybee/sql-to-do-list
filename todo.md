@@ -56,14 +56,14 @@
     - [x] ready function
         - [x] getTasks call
         - [x] click listener for submit/post button
-        - [] click listener for handle-delete
+        - [x] click listener for handle-delete
         - [] click listener for handle-complete button
 
 - [x] AJAX Operations
     - [x] GET (this should allow us to create html to append our response to the DOM)
     - [x] POST
     - [] PUT
-    - [] DELETE
+    - [x] DELETE
 
 
 ### Server Side
@@ -77,10 +77,10 @@ Setup:
 
 ### Routes
 - [x] task Library to hold our sql query texts. this will let us access our pg pool
-    - [] router.delete 
+    - [x] router.delete 
         - will be needed to delete the id/row associated with the delete button that is clicked
 
-    - [] router.post
+    - [x] router.post
         - This will help us post our new task into the database.
 
     - [] router.post 
@@ -97,7 +97,7 @@ Setup:
 
 
 ### Postico Database
-- [] create a table that holds the tasks and their values
+- [x] create a table that holds the tasks and their values
 - [] create an insert into tasks sql request
 - [] create a delete from tasks sql request
 - [] write out the select _ from _ requests
