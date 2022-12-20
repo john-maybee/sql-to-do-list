@@ -2,28 +2,28 @@
 
 
 ### Project Requirements
-- [] Needs
+- [x] Needs
     - [x] Create front end that allows user to create a Task
-    - [] Then store Task inside of an SQL database
+    - [x] Then store Task inside of an SQL database
 
-    - [] When new Task created:
-        - [] Front end should refresh showing all of the tasks needing to be completed
+    - [x] When new Task created:
+        - [x] Front end should refresh showing all of the tasks needing to be completed
 
     - Tasks:
-        - [] Each should have option to 'Complete' or 'Delete'
+        - [x] Each should have option to 'Complete' or 'Delete'
 
         - [] When Task completed: (complete both is css, but hook into logic)
             - [] visual representation should change
                 - (Such as background of task container changing grey to green)
-            - [] The complete option should be 'checked off.'
+            - [x] The complete option should be 'checked off.'
 
         - Deleting a Task
-            - [] should remove the Task from front end and the database
+            - [x] should remove the Task from front end and the database
 
 
 ### Setup
-- [] Files
-    - [] PUBLIC STATIC
+- [x] Files
+    - [x] PUBLIC STATIC
     - [x] HTML
     - [x] CSS
         - [x] background color
@@ -36,7 +36,7 @@
     - [x] .gitignore
     - [x] package.json...
     - [x] server.js
-    - [] database.sql
+    - [x] database.sql
     - [x] Module folder that has file to access/require pg 
         - [x] pool.js
 
@@ -57,12 +57,12 @@
         - [x] getTasks call
         - [x] click listener for submit/post button
         - [x] click listener for handle-delete
-        - [] click listener for handle-complete button
+        - [x] click listener for handle-complete button
 
 - [x] AJAX Operations
     - [x] GET (this should allow us to create html to append our response to the DOM)
     - [x] POST
-    - [] PUT
+    - [x] PUT
     - [x] DELETE
 
 
@@ -83,7 +83,7 @@ Setup:
     - [x] router.post
         - This will help us post our new task into the database.
 
-    - [] router.post 
+    - [x] router.post 
         - this one will help us post the fact our task is completed into the database (or should this be a router.put?)
 
     - [x] router.get needed to be able to select the 
@@ -98,7 +98,7 @@ Setup:
 
 ### Postico Database
 - [x] create a table that holds the tasks and their values
-- [] create an insert into tasks sql request
+<!-- - [] create an insert into tasks sql request -->
 - [x] create a delete from tasks sql request
 - [] write out the select _ from _ requests
 

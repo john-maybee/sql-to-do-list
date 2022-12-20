@@ -108,3 +108,4 @@ function changeColor() {
 
 
 // should I do an if else within the GET function? This way I could possibly rotate back through the information and append it according to the status
+// does this need to be happening in the task.router after the items are returned and ready to push?
