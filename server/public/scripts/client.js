@@ -29,7 +29,7 @@ function postTask() {
         url: '/taskLibrary',
         data: taskObject
     }).then( function (response) {
-        $('.new-task').val('')  // clear the task input field
+        $('#new-task').val('')  // clear the task input field
         getTasks();
     });
 } // end of postTask function
@@ -50,10 +50,11 @@ function getTasks() {
                 <tr data-id=${response[i].id}>
                     <td>${response[i].task}</td>
                     <td>
-                        <label id="status-change-label" for="status-change">${response[i].status}</label>
+                        <p id="status-change-label" for="status-change">${response[i].status}</p>
                         <button class="status-change">done</button>
                     </td>
                     <td>
+                        <p id="delete-label" for="delete">delete task</p>
                         <button class="delete">delete</button>
                     </td>
                 </tr>

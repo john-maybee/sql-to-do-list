@@ -47,6 +47,11 @@ label{
     margin-left: 35px;
 }
 
+td:nth-child(2), td:last-child{
+    color:#36447b;
+    text-align: center;
+}
+
 table{ 
     color: #36447b;
     border: 1.5px solid #36447b;

@@ -91,7 +91,7 @@ Setup:
 - [x] task router to create the task variable that equals an array 
     - [] could make it so an existing array of task objects exists on load.
 
-- [] module.exports for each router
+- [x] module.exports for each router
 - [x] require express
 - [x] express.router
 
@@ -99,7 +99,7 @@ Setup:
 ### Postico Database
 - [x] create a table that holds the tasks and their values
 - [] create an insert into tasks sql request
-- [] create a delete from tasks sql request
+- [x] create a delete from tasks sql request
 - [] write out the select _ from _ requests
 
 --------------------------------------------------------------------------------------
