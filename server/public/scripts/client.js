@@ -58,8 +58,17 @@ function getTasks() {
                         <button class="delete">delete</button>
                     </td>
                 </tr>
-            `)
-        }    
+            `)    
+        }
+        for(let i = 0; i < response.length; i++)  {
+            if (response[i].status == "completed") {
+                console.log('complete change');
+                $(this).parent().toggleClass('left-color');
+            }
+            else if (response[i].status == "work to do"){
+                console.log('no change in background');
+            }
+        }  
     });
 } // end getTasks function
 
@@ -93,7 +102,7 @@ function handleStatus() {
         data: {state: 'completed'},
     }).then( function (){
         getTasks();
-        changeColor();
+        // changeColor();
     }).catch( function(error) {
         console.log('error with putting, ', error);
     });
@@ -101,9 +110,9 @@ function handleStatus() {
 
 ////////////////////////////////////////changeColor function///////////////////////////////////////
 // see if making a seperate function changes the background color of the status data
-function changeColor() {
-   $(this).parent().toggleClass('left-color');
-}
+// function changeColor() {
+//    $(this).parent().toggleClass('left-color');
+// }
 
 
 
