@@ -76,3 +76,7 @@ th:nth-child(2), td:nth-child(2){
 th:last-child, td:last-child{
     width: 15%;
 }
+
+.left-color {
+    background-color: #5F79DC;
+}

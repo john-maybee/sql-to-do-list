@@ -12,7 +12,7 @@ function onReady() {
     // need to make a click event to call a function to handle delete click events
     $('#incompleteTableBody').on('click', '.delete', handleDelete);
     // same for status button. (on click could update the status, and be able to flip it back)
-    $('#incompleteTableBody').on('click', '.status', handleStatus);
+    $('#incompleteTableBody').on('click', '.status-change', handleStatus);
 } // end of onReady function
 
 // let status = 'work to do';
@@ -84,6 +84,18 @@ function handleDelete() {
 ///////////////////////////////////////handleStatus function///////////////////////////////////////
 
 function handleStatus() {
-    console.log('status button clicked');
-    // need to switch the statud 
+    console.log('completed task');
+    // need to switch the status
+    const id = $(this).parent().parent().data('id');
+    $(this).parent().toggleClass('left-color');
+    // status.css('background-color', '#5F79DC');
+    $.ajax({
+        type: 'PUT',
+        url: `/taskLibrary/${id}`,
+        data: {status: 'completed'},
+    }).then( function (){
+        getTasks();
+    }).catch( function(error) {
+        console.log('error with putting, ', error);
+    });
 }

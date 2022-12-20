@@ -66,5 +66,29 @@ router.delete('/:id', (req, res) => {
 });
 
 
+router.put('/status/:id', (req, res) => {
+    const status = req.body.status;
+    let queryText = '';
+    if(status == 'completed') {
+        // change status to completed
+        queryText = `UPDATE "tasks" SET "status"="completed" WHERE "id"=${req.params.id};`;
+    } else if (status == 'work to do'){
+        // change status to work to do
+        queryText = `UPDATE "tasks" SET "status"="work to do" WHERE "id"=${req.params.id};`;
+    } else {
+        res.sendStatus(500);
+        return;
+    }
+    pool.query(queryText)
+    .then((dbResponse) => {
+        console.log('dbResponse', dbResponse);
+        res.sendStatus(200);
+    })
+    .catch((error) => {
+        console.log(error);
+        res.sendStatus(500);
+    });
+});
+
 
 module.exports = router;

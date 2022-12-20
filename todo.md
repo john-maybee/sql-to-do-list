@@ -37,8 +37,8 @@
     - [x] package.json...
     - [x] server.js
     - [] database.sql
-    - [] Module folder that has file to access/require pg 
-        - [] pool.js
+    - [x] Module folder that has file to access/require pg 
+        - [x] pool.js
 
     - [x] Routes folder
         - [x] task.router (can create the task variable that equals a blank array)
