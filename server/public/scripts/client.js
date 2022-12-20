@@ -58,12 +58,12 @@ function getTasks() {
                         <button class="delete">delete</button>
                     </td>
                 </tr>
-            `);
-        }
+            `)
+        }    
     });
 } // end getTasks function
 
-
+// $(this).parent().toggleClass('left-color');
 ///////////////////////////////////////handleDelete function///////////////////////////////////////
 
 function handleDelete() {
@@ -87,15 +87,24 @@ function handleStatus() {
     console.log('completed task');
     // need to switch the status
     const id = $(this).parent().parent().data('id');
-    $(this).parent().toggleClass('left-color');
-    // status.css('background-color', '#5F79DC');
     $.ajax({
         type: 'PUT',
         url: `/taskLibrary/status/${id}`,
         data: {state: 'completed'},
     }).then( function (){
         getTasks();
+        changeColor();
     }).catch( function(error) {
         console.log('error with putting, ', error);
     });
 }
+
+////////////////////////////////////////changeColor function///////////////////////////////////////
+// see if making a seperate function changes the background color of the status data
+function changeColor() {
+   $(this).parent().toggleClass('left-color');
+}
+
+
+
+// should I do an if else within the GET function? This way I could possibly rotate back through the information and append it according to the status
